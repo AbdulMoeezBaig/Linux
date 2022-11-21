@@ -25,4 +25,16 @@ cp -> copy
 cp ls ABC (copies ls as ABC) (if no permission)
 sudo cp ls ABC -> sudo lets u pretend ur admin so u have permissions to copy etc  
 rm ->  remove 
-sudo rm ls -> removes ls files
+sudo rm ls -> removes ls files  
+sbin -> has special commands that only administrators can use to administer the system  
+adduser -> adds user, needs sudo
+bin / sbin in root = bin / sbin in user  
+which ls -> tells where the command binaries live (in our case, its in root/user/bin not in root/bin  
+boot -> (root) has boot files  
+var -> (root) log files / web application related files  
+temp -> (root) files that go away after restart or so, temporary files  
+lib -> (root) shared library files  
+home -> (root) where every user lives  
+home -> ls shows all users  
+sudo ls root -> shows directories inside root, root does not live in  home but somewhere else  
+
