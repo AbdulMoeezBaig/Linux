@@ -88,5 +88,13 @@ apropos usb -> tells all commands with usb and helps with remembering commands t
 apropos compress -> tells all commands 
 
 ## Video 4
+adduser > useradd -> both similar commands but one does more than the other  
+cat passwd -> inside etc shows all user names at end of result  
+x -> infront of each user shows  that password is stored in a separate file etc/shadow  
+sudo cat/etc/shadow -> shows hashed version of password  
+after the x -> two numbers -> 1st is user id -> 2nd is group id, names and such , then at end -> home directory and at end, information about once user logs in, what  shell he gets  
+sudo useradd ironman -> adds user ironman (does not demand further info)  
+useradd -> default shell becomes bin/sh and not /bin/bash (as in the case of adduser)  
+
 
  
