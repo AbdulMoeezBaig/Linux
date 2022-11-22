@@ -189,10 +189,53 @@ $ps -aux | grep sublime -> we see the process (we had opened the application aub
 close the application, retype ps -aux |grep sublime , process will be gone  
 these are interactive processes -> we did some thing to open them  
 other processes that we did not open are usually -> daemon (processes also)  
-daemons -> background processes (networking, printing, SSH)  
+daemons -> background processes (networking, printing)  
 daemon processes have d at the end -> shows they are daemon  
 $ ps -aux | grep ssh -> shows sshd (daemon process)  (daemons launch with boot automatically)
 ntp -> network time protocol (keeps time in synch on ur linux server)  
+systemd -> master daemon -> starts daemons, stops daemons, also a daemon as d at the end  
+systemd -> is a server manager and also an initialization system (init)  
+initiliazation system -> massive job -> when we boot -> boots, loads kernel -> systemd -> mounts file system -> starts all services (systemd is the first process)  
+from systemd using forking -> starts other processes / daemons  
+pstree -> process tree (systemd at the top)  
+ps -aux -> each process has a number -> systemd -> process ID=1 (master daemon, first one)  
+there have been other names for systemd in the past but we focus on systemd  
+systemd calls other daemons as units  
+$systemctl stop sshd -> stops sshd process  (sudo before)  
+sudo systemctl status sshd (tells status of sshd if active or inactive)  
+sudo systemctl start sshd -> starts  
+sudo systemctl restart sshd -> restarts  
+sudo systemctl reload sshd (not all cannot do this, so reload configuration but not the whole service)  
+sudo systemctl reload-or-restart sshd (reload if u can, if not, restart)  
+sudo systemctl disable ntp -> disables ntp from default start  
+sudo systemctl status ntp -> ntp service disabled means it wont be enabled again if disabled or reboot)  
+sudo systemctl enable ntp -> enables for boot  
+sudo systemctl is-active ntp  ->shows if active  
+sudo systemctl is-enabled ntp -> if enabled  
+sudo systemctl list-units -> daemons are units for systemd, lists all daemons (active ones)  
+service, socket, device at the end of daemon names, are the type of daemons , many types  
+sudo systemctl list-units -t service -> lists all active service daemons  
+sudo systemctl list-units | grep nginx -> should list nginx if it was active but doesnt... special cases exist !  
+systemctl list units only shows units that are parsed and are in memory, for units not in memory, we need a different command  
+sudo systemctl list-units-files |grep ngnix  
+ngnix -> is a webserver  
+ngnix does not work directly with sudo systemctl start ngnix -> issue  
+result tells you to check journalctl *another systemd utility*, laws for systemd stuff  
+sudo journalctl -xe -> has no entries  (so we want to restart it)  
+sudo systemctl list-units | grep journal (so we can find journal's full name)  
+sudo systemctl restart systemd-journald -> restarts  
+sudo systemctl start ngnix  -> still doesn't work but nor journal -xe would work cz restarted  
+sudo journalctl -xe  
+issue happens to be that the port it wants to use is being used by another daemon  
+
+## Video 7
+
+
+
+
+
+
+
 
 
 
