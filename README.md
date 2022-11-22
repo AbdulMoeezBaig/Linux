@@ -115,7 +115,68 @@ sudo visudo  -> only way to see and do sudo file contents
 %sudo -> its a group and if ur in the group, u dont have to enter password (unsecure dangerous etc)  
 thanos ALL = ALL (allows user thanos to do everything)  
 thanos ALL = /sbin/useradd  
+CTRL + X -> go out of file, save while doing so  
+sudo su - thanos  
+sudo userdel thor  
+sudo userdel ... -> deletes user
+sudo groupadd infinitygauntlet -> adds a group to etc/group  
+every user created also has a group created with it  
+this group can be added to sudoers file  (all of them gain powers)  
+To add a group to sudo -> sudo visudo -> under sudo write ->  %infinitygauntlet ALL = NOPASSWD:ALL  
+sudo usermod -G -> adds user to group but removes all other groups so can do -> sudo usermod -aG  infinitygaultet ironman  
+sudo gpasswd -d thanos infinitygauntlet -> removes thanos from the group  
+sudo groupdel -> delete group infinitygauntlet  
 
- 
+## Video 5
+Linux package management -> installing stuff  
+dpkg apt -> 2 types of packages  
+dpkg -> low level package manager  (install ,remove)  
+Installing discord: Go to discord.com, download for linux, save the .deb file, cd to download directory, (.deb = Debian base, executable for parrot)  
+dpkg -i discord121312.deb -> way to install package but yields error  
+sudo dpkg -i discord.deb -> should work but errors / problems  
+discord depends on other packages which come in error so they must be installed ourselves  
+apt is better, does not do this... advanced package tool (apt)  
+sudo apt update  (apt updates itself with list of all packages)  
+sudo apt install pidgin  (pidgin is the package name) but might not get installed if there is an already broken installation  
+the broken installation has an apt command in it to fix it  
+apt itself installs the missing packages as well  
+apt -> high level package manager  
+dpkg -> requires us to download the deb file, apt does not need that  
+apt -> relies on repo (needs only package name)  
+sudo apt  edit-sources -> choose editor -> shows the repo's being used to update the apt list  
+if ^ does not yield the sources, as in the case of using parrot, go to the mentioned address by using ->  sudo nano [address]  
+these tools might have an alternative way to install a package if its not available in the repo  
+sudo apt -h -> tells  switches u can use   
+sudo apt list -> lists all the available packages  
+apt list --installed -> shows what your system is installed with  or -> apt list --installed | grep ^nmap -> shows if nmap is installed  
+sudo apt show nmap  -> tells what nmap is, or another package  
+sudo apt search nmap -> searches for nmap through a bunch of packages  
+sudo apt remove pidgin -> removes pidgin package  (does not remove user data)  
+sudo apt purge pidgin -> removes everything about pidgin  
+sudo apt list --installed | grep  ^pidgin -> now shows nothing cz pidgin is purged  
+sudo apt upgrade  -> update packages that u have  
+sudo apt update && sudo apt upgrade  --> check the repository and upgrade everything  
+sudo apt update && sudo apt full-upgrade -> removes previously installed applications / packages required for upgrades (i.e. old version of things)  
+dpkg -l -> lists, can also search and so  
+aptitute -> apt on steriods , high level,  
+sudo aptitude  -> u get an iterative GUI in CUI  
+aptitude -> high level package manager  
+snap / snapd -> more like a store, works like apt, apps get added to snap store and become readily available  
+apt install snapd -> snapd is a package manager, apt installs snapd  
+sudo snap install --classic code -> installs vscode  
+code -> opens VS code  
+python's own package manager -> pip  (pip install)  
+ruby's package manager -> rubygems  (gem install)  
+sudo apt install git -> installs git  
+git clone [directory URL link]  
+pip 3 -> used for python3  
+pip3 install -r requirements.txt -> installs the requirements listed in the python script that you downloaded  
+python3 [script name] -h -> gives help about what switches to use  
+
+## Video 6
+
+
+
+
 
  
