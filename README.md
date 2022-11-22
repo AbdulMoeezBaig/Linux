@@ -111,7 +111,10 @@ sudo su - -> makes you root user
 logout-> to logout  
 if u change users and use sudo it probably wont work
 sudoers file determines who can use sudo  
-
+sudo visudo  -> only way to see and do sudo file contents  
+%sudo -> its a group and if ur in the group, u dont have to enter password (unsecure dangerous etc)  
+thanos ALL = ALL (allows user thanos to do everything)  
+thanos ALL = /sbin/useradd  
 
  
 
