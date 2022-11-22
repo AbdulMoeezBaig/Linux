@@ -53,3 +53,40 @@ FHS -> file system hierarchy
 
 
 ## Video 3
+Parrot -> terminal emulator on hack the box  
+Shell -> user interface we use to interact with the OS (Linux kernel)  (its the UI) 
+Terminal emulator -> is what we use to iteract with the shell  (its the keyboard)
+Shell -> we using BASH (Bourne again shell)  
+ps -> process status 
+ps -> shows what processes running, once we run, we see bash, which means shell being used is bash (can be other shells)  
+power shell -> windows -> microsoft -> also runs on linux -> its a shell (way to interact with linux)
+run ps on power shell -> u see the process as 'pwsh' and not 'bash' because now shell is pwsh (power shell) and not bash (as in the case of parrot)  
+terminal -> bash -> shell -> console (all same, used being interchangeably)  
+base address is user@hostname/directory  
+$ in start shows you are a user  
+hash in start shows you are a root user  
+id = tells all about you
+hostname = tells you host name
+uname = tells you nothing but use with extensions  
+uname -r = 
+uname -a = 
+ifconfig = 
+ip = 
+netstat = status of network  
+ss = session stuff  
+ps = process stuff  
+who = tells who else is logged on  
+env = environment variables  
+lsblk = list blocks (hard drive stuff)  
+lsusb = list usbs plugged in  
+lsof = lists all open files 
+man uname = helps with command syntax and switches and so  
+man ls   
+man ip  
+uname -h OR uname--h -> gives command help with switches and such  
+apropos usb -> tells all commands with usb and helps with remembering commands that can be used  
+apropos compress -> tells all commands 
+
+## Video 4
+
+ 
