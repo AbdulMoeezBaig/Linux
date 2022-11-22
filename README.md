@@ -95,6 +95,24 @@ sudo cat/etc/shadow -> shows hashed version of password
 after the x -> two numbers -> 1st is user id -> 2nd is group id, names and such , then at end -> home directory and at end, information about once user logs in, what  shell he gets  
 sudo useradd ironman -> adds user ironman (does not demand further info)  
 useradd -> default shell becomes bin/sh and not /bin/bash (as in the case of adduser)  
+useradd -> does not add password or anything  
+cat /etsy/passwd -> shows entry for password but we didnt set any passsword  
+does have an entry in the shadow file but none was set  
+sudo passwd ironman jarvis  -> sets new password for ironman user (now upon checking shadow file we will get a hash)  
+still ironman does not have a home (directory)  
+ls -al -> reveals hidden files  
+usermod -> user modification  
+sudo usermod ironman --shell /bin/bash -> shifts shell to bash (from sh)  
+sudo usermod -l tony ironman -> changes username  to tony from ironman  
+sudo -> super user do (stands for)  
+su -> switching another user  
+su - -> no user put = shifts to root user  
+sudo su - -> makes you root user
+logout-> to logout  
+if u change users and use sudo it probably wont work
+sudoers file determines who can use sudo  
 
+
+ 
 
  
