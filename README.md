@@ -4,9 +4,9 @@ https://www.youtube.com/watch?v=VbEx7B_PTOE&amp;list=PLIhvC56v63IJIujb5cyE13oLuy
 ### Linux Commands
 pwd -> tells where were are at  
 ls -> list all folders / directories  
-cd desktop -> changes directory to desktop
-cd .. -> goes to previous directory
-cd .. cd.. cd.. -> reach / -> root directory
+cd desktop -> changes directory to desktop  
+cd .. -> goes to previous directory  
+cd .. cd.. cd.. -> reach / -> root directory  
 whoami -> user's name  
 clear -> clear screen 
 
