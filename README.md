@@ -18,6 +18,8 @@ cd .. -> goes to previous directory
 cd .. cd.. cd.. -> reach / -> root directory
 whoami -> user's name  
 clear -> clear screen  
+
+## Video 2
 everything in linux is a file -> network configuration -> file, devices (harddrive printer etc) -> file, commands we use -> files
 cat -> concatenate (used to open files)  
 cat ls -> opens ls command file (but unreadable because it is a command binary)  
@@ -41,4 +43,13 @@ why we have 2 bin and sbin in root and user ---> comes down to hard drive space 
 dev -> devices
 vda, vda1 -> virtual drives (sda, sda1 on other things)
 sudo cat vda -> shows binary for drive, CTRL + C to stop  
+network settings -> also files -> stored in etc -> also called etsy file  
+cd etc 
+cd network 
+ls 
+sudo cat interfaces -> shows all network interfaces   
+mnt, media -> mount drives -> USB or anything gets mounted on media (automatically) and mnt is used when manual mount  
+FHS -> file system hierarchy  
 
+
+## Video 3
