@@ -37,4 +37,8 @@ lib -> (root) shared library files
 home -> (root) where every user lives  
 home -> ls shows all users  
 sudo ls root -> shows directories inside root, root does not live in  home but somewhere else  
+why we have 2 bin and sbin in root and user ---> comes down to hard drive space (details need to be looked into)  
+dev -> devices
+vda, vda1 -> virtual drives (sda, sda1 on other things)
+sudo cat vda -> shows binary for drive, CTRL + C to stop  
 
