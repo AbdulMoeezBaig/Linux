@@ -167,13 +167,27 @@ sudo snap install --classic code -> installs vscode
 code -> opens VS code  
 python's own package manager -> pip  (pip install)  
 ruby's package manager -> rubygems  (gem install)  
-sudo apt install git -> installs git  
+sudo apt install git -> installs git  Ne
 git clone [directory URL link]  
 pip 3 -> used for python3  
 pip3 install -r requirements.txt -> installs the requirements listed in the python script that you downloaded  
 python3 [script name] -h -> gives help about what switches to use  
 
 ## Video 6
+Daemon -> are in the background (processes)  
+process -> instance of running program  
+$ps -aux  (lists all the processes I think)
+| is called a pipe  (maybe)  
+$ps -aux | grep sublime -> we see the process (we had opened the application aublime before)
+close the application, retype ps -aux |grep sublime , process will be gone  
+these are interactive processes -> we did some thing to open them  
+other processes that we did not open are usually -> daemon (processes also)  
+daemons -> background processes (networking, printing, SSH)  
+daemon processes have d at the end -> shows they are daemon  
+$ ps -aux | grep ssh -> shows sshd (daemon process)  (daemons launch with boot automatically)
+ntp -> network time protocol (keeps time in synch on ur linux server)  
+
+
 
 
 
