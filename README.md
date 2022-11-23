@@ -230,6 +230,67 @@ issue happens to be that the port it wants to use is being used by another daemo
 
 ## Video 7
 
+ps -> tells what processes are running (but might not show every process)  (need to specify exactly what we want)  
+ps -u [username] -> shows all processes  
+ps -u [username] | grep firefox -> (grep = global regular expression print) -> shows firefox process (finds all firefox processes)  
+ps -u | grep firefox -> get process id (to kill it later)  
+pgrep firefox -> also returns process id  
+kill [process id] -> kills the process with the id  
+ps --help simple -> simple rundown of ps  
+ps -aux -> (a = all users, x = processes that were not executed by the terminal, u = user that process belongs to)  
+top -> lists processes ordered by CPU usage   (q to get out of it)  
+htop -> same stuff  
+ping -> used by utility network engineers or others to make sure things are running  
+ping -c 100 google.com -> pings google 100 times (this is a foreground process).. CTRL + C (kills the process), sleep puts to sleep  
+ping -c 1000 google.com -> CTRL Z -> stops the process -> jobs -> shows list of current running jobs or jobs put to sleep  
+Now we wanna switch this stopped foreground process to background process  
+bg -> runs the job we have in sleep in our jobs (if we have only one)  
+bg [job id]  -> runs the job id mentioned  
+the process starts running and now cannot be stopped with CTRL C  
+fg [job id] ->  turns it into a foreground process -> now it can be stopped  
+ping -c 300 google.com & -> & at the end makes it directly a background process  
+kill -l -> shows all the possibile signals that can be sent  
+SIGTERM -> its on kill -l -> its the default signal sent when we use kill -> this is like a soft kill (requests process to die)  
+CTRL Z -> kill signal 19 (SIGSTOP)  
+CTRL Z (again) -> signal 18 (sigcontinue) (SIGCONT)  
+CTRL C -> sig interrupt (SIGINT)  
+SIGKILL -> Kills no matter what (signal 9) (will kill no matter what)  
+kill -19 [process id] -> -19 is the kill signal,  
+pkill -9 ping -> kills all the pings (no process id needed, kills all pings)  
+
+## Video 8
+python -m http.server -> website webserver started -> accessed via -> localhost:8000 -> shown on the terminal  
+terminal shows someone accessed -> can access whole PC using this  
+python -m http.server 7600 -> starts on the port mentioned  
+the reason its showing directories is because it does not have an index.html file to look at  
+mkdir website -> makes a directory website  
+nano index.html -> creates an html file  
+save it and reload server from browser -> opens the html file  
+php -s 127.0.0.1:8085 -> this IP is your home IP, similar to local host -> localhost:8085 -> opens this web  
+systemctl start apache2 -> does not work cz someone using the same port so gotta change default port to start apache service  
+sudo nano /etc/apache2/ports.conf -> listen 80 -> listen 8080 -> ports changed  
+CTRL X Y Enter ^ above all saved  
+curl -> client URL  (communicating with websites current use)  
+curl localhost:7600 -> opens in terminal  
+curl -o coolwebsite localhost:8080 -> saves the whole website in coolwebsite file  
+cat coolwebsite -> opens the saved website  
+curl -I localhost:8080 -> this is a response header -> information about who sending, what type of information  
+health of message: 200 OK is the best message (top of the response)  
+curl -v localhost:8080 -> switch v is for verbose maybe (alot of stuff)  
+> = request header , < = response header  
+wget localhost:7600 -> downloads the code  
+200 ok -> healthy response, 404 not found -> bad response  
+
+
+## Video 9 
+
+
+
+
+
+
+
+
 
 
 
