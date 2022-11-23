@@ -283,25 +283,39 @@ wget localhost:7600 -> downloads the code
 
 
 ## Video 9 
+cd /usr/var/sniffjoke/generic  
+cd ../.. -> 2 directories back  
+CTRL +L -> also clears  
+cd -> goes home  
+cd - -> goes to previous directory  
+echo $OLDPWD -> tells the value of the variable  
+cd - uses this variable to toggle between old and current directory  
+ls -l -> lists as top down list with other info  
+ls -al ->we unlock hidden files  
+ls -al ->all files starting with '.' are hidden files  
+ll -> lists all (aliases)  
+la -> lists all with hidden also (alias)  
+alias lumos = "ls -al" -> creates alias for command and name it as lumos  
+this alias is temporary and goes if we log off  
+nano .bashrc -> opens the hidden file  -> add lumos here and it will be saved  
+ctrl + shift + (+) = zoom (or ctrl + (+))  
+ctrl shift c -> copy  
+ctrl shift v -> paste  
+ctrl a -> move to start of command -> for fixing typos or maybe adding even sudo  
+ctrl e -> end of command  
+ctrl u -> delete u -> deletes everything before cursor  
+crtl y -> will take whatever is deleted and put it on cursor location  
+ctrl k -> opposite of control u (deletes forward)  
+alt backspace -> takes out the word ur on  
+ctrl xe -> lets u edit the command in the default text editor (nano or so)  
+sudo less /var/log/auth.log -> less shows only a part  
+sudo!! -> runs sudo on last command incase you forgot  
+tail -> recent log (not full log)  
+tail /var/ (tab tab) -> shows all directories to make navigation easier  
+sudo tail -f  /var/log/auth.log -> looking at logs in real time  
+ctrl r -> reverse searching  
+ctrl r -> les -> shows previously used commands  
+
+## Video 10 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
