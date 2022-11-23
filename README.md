@@ -317,5 +317,32 @@ ctrl r -> reverse searching
 ctrl r -> les -> shows previously used commands  
 
 ## Video 10 
+touch canttouchthis.txt -> creates the file  
+cat canttouchthis.txt -> opens it (empty)  
+touch cant touch this -> 4 files created  
+cat >file.txt -> creates and opens a file and waits for input for the file  
+cat file.txt -> file opened and viewed  
+cat << EOF > nameofourfile.txt -> EOF = End of File, This lets u add text and as many lines as you want until you put EOF and enter. EOF is not a syntax, its something we created to declare end of file when we type it  
+echo "whatever random stuff"  > randomstuff.txt -> creates and puts info in the file  
+mkdir newdirectory -> makes new directory  
+d -> directory, -r -> file (in ls -s)  
+mkdir this is a directory -> 4 directories  
+mv file.txt ./directory -> directory is present in same folder.. moves file.txt to ./directory  
+we can move + rename at the same time..-> mv file.txt ./directory/newidentity.txt  
+cp -> copy  
+.bak -> usually backup  
+mkdir -p -> directories + child direcctories with -p switch  
+tree -> gives tree for directories  
+-r -> recursive  
+rm -> remove  
+rmdir -> remove directory  
+rm -r -> used to remove directory with files (cannot be recovered)  
+rm -rf  --no-preserve-root / -> will probably delete all/crash or so as we deleted all files  
+nano anotherone.sh -> opens the editor  
+for loops in bash ...   
+bash anotherone.sh -> runs the script  
+
+
+
 
 
